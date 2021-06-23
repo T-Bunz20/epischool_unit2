@@ -12,3 +12,23 @@ def primes_below(num):
         if is_prime(i):
             output.append(i)
     return output
+
+def is_palindrome(num):
+    i = 0
+    j = len(str(num)) - 1
+    while(i < j):
+        first = str(num)[0]
+        last = str(num)[len(str(num)) - 1]
+        if(first != last):
+            return False
+        i += 1
+        j -= 1
+    return True
+
+def palindrome_primes(digits):
+    output = []
+    for i in range(10**(digits - 1), 10**digits):
+        if is_prime(i):
+            if is_palindrome(i):
+                output.append(i)
+    return output
