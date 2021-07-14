@@ -17,8 +17,8 @@ def is_palindrome(num):
     i = 0
     j = len(str(num)) - 1
     while(i < j):
-        first = str(num)[0]
-        last = str(num)[len(str(num)) - 1]
+        first = str(num)[i]
+        last = str(num)[j]
         if(first != last):
             return False
         i += 1
